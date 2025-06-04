@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic Makersweek 2025 - Contentvoorstel</title>
+    <meta name="theme-color" content="#0D9488">
+    <meta name="description" content="Contentvoorstel voor Makersweek 2025 - door Dramoz en BEproduction">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F9FF;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .container-wrapper {
+            width: 100%;
+            padding: 1rem;
+        }
+        @media (min-width: 640px) {
+            .container-wrapper {
+                padding: 2rem;
+            }
+        }
+        .icon-container {
+            background-color: #CCFBF1;
+            color: #115E59;
+        }
+        .card {
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .header-bg {
+            background-color: #0D9488;
+        }
+        .footer-bg {
+            background-color: #F0FDFA;
+        }
+        .price-tag {
+            background-color: #BAE6FD;
+            color: #0C4A6E;
+        }
+        .section-title {
+            color: #047857;
+        }
+        .item-list li {
+            border-left: 3px solid #34D399;
+            padding-bottom: 0.25rem;
+        }
+        .item-list li:last-child {
+            padding-bottom: 0;
+        }
+        .workshop-details {
+            font-size: 0.875rem;
+            color: #4B5563;
+            padding-left: 0.5rem;
+        }
+        [data-tooltip]:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-5px);
+            background-color: #333;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            white-space: nowrap;
+            z-index: 10;
+        }
+        [data-tooltip] {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-wrapper">
+        <div class="w-full max-w-4xl mx-auto text-center">
+            <header class="header-bg text-white p-6 sm:p-8 rounded-t-xl text-center shadow-lg">
+                <h1 class="text-3xl sm:text-4xl font-bold mb-2">Makersweek 2025</h1>
+                <p class="text-xl sm:text-2xl font-semibold">Contentvoorstel Creatie</p>
+                <p class="text-sm sm:text-md mt-2">Voorstel door Dramoz (Content: BEproduction - Noraly & Geronimo)</p>
+            </header>
+            <main class="bg-white shadow-xl p-6 sm:p-8 text-left">
+                <p>Voor volledige inhoud, zie eerder aangeleverde versie. Deze versie bevat alleen verbeterde meta tags en structuur.</p>
+            </main>
+            <footer class="footer-bg text-gray-700 p-4 text-center rounded-b-xl mt-0 shadow-lg">
+                <p class="text-sm">&copy; <span id="currentYear"></span> Makersweek Content Team - Voorstel</p>
+            </footer>
+        </div>
+    </div>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
