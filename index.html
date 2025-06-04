@@ -95,7 +95,7 @@
     <div class="container-wrapper">
         <div class="w-full max-w-4xl mx-auto text-center">
             <header class="header-bg text-white p-6 sm:p-8 rounded-t-xl text-center shadow-lg">
-                <h1 class="text-3xl sm:text-4xl font-bold mb-2">Makersweek 2025</h1>
+                <h1 class="text-3xl sm:text-4xl font-bold mb-2">Makersweek <span id="headerYear"></span></h1>
                 <p class="text-xl sm:text-2xl font-semibold">Contentvoorstel Creatie</p>
                 <p class="text-sm sm:text-md mt-2">Voorstel door Dramoz (Content: BEproduction - Noraly & Geronimo)</p>
             </header>
@@ -108,7 +108,15 @@
         </div>
     </div>
     <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        const year = new Date().getFullYear();
+        const footerYearEl = document.getElementById('currentYear');
+        if (footerYearEl) {
+            footerYearEl.textContent = year;
+        }
+        const headerYearEl = document.getElementById('headerYear');
+        if (headerYearEl) {
+            headerYearEl.textContent = year;
+        }
     </script>
 </body>
 </html>
